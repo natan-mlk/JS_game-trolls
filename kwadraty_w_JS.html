@@ -1,0 +1,137 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="kwadraty2.css">
+<meta charset="utf-8">
+<title>Trollowe kwadraty</title>
+</head>
+
+<body>
+<!--<button id="przycisk">Jeszcze raz</button> -->
+<p>Gdzieś pod polami ukryty jest troll-face. Znajdź go i złap, 
+klikając na niego. Długo nie może uciekać</p>
+<div id='main'>
+
+</div> 
+
+<script>
+
+//stwórz Array, do którego włóż pętlą nowe divy
+var wszystkieKwadraty = [];
+for (var i = 0; i <9; ++i) {
+    wszystkieKwadraty[i] = document.createElement('div');
+	wszystkieKwadraty[i].id = 'a' + (i);
+	wszystkieKwadraty[i].className = 'kafelek';
+};
+
+
+// SZUFLOWANIE
+//metoda Fisher-Yates
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex ;
+
+  // dopóki są pozostajace elementy do szuflowania
+  while (0 !== currentIndex) {
+
+    // weź pozostały element
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // i zamień go z obecnym elementem
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+};
+
+
+//zamieszaj kolejność w Array i umieść w kodzie pętlą
+shuffle(wszystkieKwadraty);
+var main = document.getElementsByTagName('div')[0];
+(function () {
+	for (var i=0; i < wszystkieKwadraty.length; i++){
+main.appendChild(wszystkieKwadraty[i]);}
+})();
+
+
+//dodaj funkcje znikającej zawartości boxa
+document.getElementById('a0').onclick = funkcjaBox0;
+document.getElementById('a1').onclick = funkcjaBox1;
+document.getElementById('a2').onclick = funkcjaBox2;
+document.getElementById('a3').onclick = funkcjaBox3;
+document.getElementById('a4').onclick = funkcjaBox4;
+document.getElementById('a5').onclick = funkcjaBox5;
+document.getElementById('a6').onclick = funkcjaBox6;
+document.getElementById('a7').onclick = funkcjaBox7;
+document.getElementById('a8').onclick = funkcjaBox8;
+
+function funkcjaBox0() {
+	document.getElementById('a1').style.backgroundImage =
+	'url("trollface.png")'
+	document.getElementById('a1').style.backgroundSize ='100%'};
+
+function funkcjaBox1() {
+	document.getElementById('a2').style.backgroundImage =
+	'url("trollface.png")'
+	document.getElementById('a2').style.backgroundSize ='100%'};
+
+function funkcjaBox2() {
+	document.getElementById('a3').style.backgroundImage =
+	'url("trollface.png")'
+	document.getElementById('a3').style.backgroundSize ='100%'};
+
+function funkcjaBox3() {
+	document.getElementById('a4').style.backgroundImage =
+	'url("trollface.png")'
+	document.getElementById('a4').style.backgroundSize ='100%'};
+
+function funkcjaBox4() {
+	document.getElementById('a5').style.backgroundImage =
+	'url("trollface.png")'
+	document.getElementById('a5').style.backgroundSize ='100%'};
+
+function funkcjaBox5() {
+	document.getElementById('a6').style.backgroundImage =
+	'url("trollface.png")'
+	document.getElementById('a6').style.backgroundSize ='100%'};
+
+function funkcjaBox6() {
+	document.getElementById('a7').style.backgroundImage =
+	'url("trollface.png")'
+	document.getElementById('a7').style.backgroundSize ='100%'};
+
+function funkcjaBox7() {
+
+	document.getElementById('a8').style.backgroundImage =
+	'url("trollface.png")'
+	document.getElementById('a8').style.backgroundSize ='100%'};
+
+function funkcjaBox8() {
+	document.getElementById('a8').style.backgroundImage = 
+	'url("trollface_sad.png")';
+	document.getElementById('a8').style.backgroundSize =
+	'100%';
+	document.getElementById('a8').style.backgroundRepeat =
+	'no-repeat'};	
+
+for ( var i=0; i<9; i++) {
+	wszystkieKwadraty[i].onmouseover = function () {
+	this.style.backgroundImage =
+	''}};	
+	
+//Przycisk 'jeszcze raz'
+
+/*
+var przycisk = document.getElementById('przycisk');
+przycisk.addEventListener('click', shuffle(wszystkieKwadraty));
+przycisk.addEventListener('click', function () {
+	for (var i=0; i < wszystkieKwadraty.length; i++){
+main.appendChild(wszystkieKwadraty[i]);}
+});*/
+//dlaczego ten przycisk działa tylko raz?
+	
+	
+</script>
+</body>
+</html>

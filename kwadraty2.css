@@ -1,0 +1,23 @@
+#main {
+	max-width: 600px;
+	background-color: ;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.kafelek {
+	width: 33%;
+	padding-bottom: 33%;
+	float: left;
+	position: relative;
+	background-color: #66ccff;
+	border: 1px;
+	border-color: black;
+	border-style: solid;
+	cursor: pointer;
+	-webkit-transition: all 0.15s ease-in-out;
+	transition: all 0.15s ease-in-out;
+}
+
+p {text-align: center}
