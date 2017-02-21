@@ -9,9 +9,12 @@
 <!--<button id="przycisk">Jeszcze raz</button> -->
 <p id="lol">Gdzieś pod polami ukryty jest troll-face. Znajdź go i złap,
   klikając na niego. Długo nie może uciekać</p>
-<div id='main'>
+<p>Kliknąłeś:</p>
+<p id="kliki">0</p>
 
+<div id='main'>
 </div>
+
 
 <script>
 
@@ -22,8 +25,6 @@
     wszystkieKwadraty[i].id = 'a' + (i);
     wszystkieKwadraty[i].className = 'kafelek';
   }
-  ;
-
 
   // dodanie obrazków wenątrz divów
   for (var j = 1; j <= 8; ++j) {
@@ -59,8 +60,6 @@
 
     return array;
   }
-  ;
-
 
   //zamieszaj kolejność w Array i umieść w kodzie pętlą
   shuffle(wszystkieKwadraty);
@@ -89,34 +88,58 @@
     setTimeout(function () {
       document.getElementById('t1').classList.remove('show-hide')
     }, 600); //dawać to?
+    licznik = document.getElementById('kliki').innerHTML;
+    licznik ++;
+    document.getElementById('kliki').innerHTML = licznik;
   }
 
   function funkcjaBox1() {
-    document.getElementById('t2').classList.add('show-hide')
+    document.getElementById('t2').classList.add('show-hide');
+    licznik = document.getElementById('kliki').innerHTML;
+    licznik ++;
+    document.getElementById('kliki').innerHTML = licznik;
   }
 
   function funkcjaBox2() {
-    document.getElementById('t3').classList.add('show-hide')
+    document.getElementById('t3').classList.add('show-hide');
+    licznik = document.getElementById('kliki').innerHTML;
+    licznik ++;
+    document.getElementById('kliki').innerHTML = licznik;
   }
 
   function funkcjaBox3() {
-    document.getElementById('t4').classList.add('show-hide')
+    document.getElementById('t4').classList.add('show-hide');
+    licznik = document.getElementById('kliki').innerHTML;
+    licznik ++;
+    document.getElementById('kliki').innerHTML = licznik;
   }
 
   function funkcjaBox4() {
-    document.getElementById('t5').classList.add('show-hide')
+    document.getElementById('t5').classList.add('show-hide');
+    licznik = document.getElementById('kliki').innerHTML;
+    licznik ++;
+    document.getElementById('kliki').innerHTML = licznik;
   }
 
   function funkcjaBox5() {
-    document.getElementById('t6').classList.add('show-hide')
+    document.getElementById('t6').classList.add('show-hide');
+    licznik = document.getElementById('kliki').innerHTML;
+    licznik ++;
+    document.getElementById('kliki').innerHTML = licznik;
   }
 
   function funkcjaBox6() {
-    document.getElementById('t7').classList.add('show-hide')
+    document.getElementById('t7').classList.add('show-hide');
+    licznik = document.getElementById('kliki').innerHTML;
+    licznik ++;
+    document.getElementById('kliki').innerHTML = licznik;
   }
 
   function funkcjaBox7() {
-    document.getElementById('t8').classList.add('show-hide')
+    document.getElementById('t8').classList.add('show-hide');
+    licznik = document.getElementById('kliki').innerHTML;
+    licznik ++;
+    document.getElementById('kliki').innerHTML = licznik;
   }
 
   function funkcjaBox8() {
@@ -125,7 +148,10 @@
     document.getElementById('a8').style.backgroundSize =
       '100%';
     document.getElementById('a8').style.backgroundRepeat =
-      'no-repeat'
+      'no-repeat';
+    licznik = document.getElementById('kliki').innerHTML;
+    licznik ++;
+    document.getElementById('kliki').innerHTML = licznik;
   }
 
 
