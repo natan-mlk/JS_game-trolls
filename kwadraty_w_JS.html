@@ -6,7 +6,6 @@
 </head>
 
 <body>
-<!--<button id="przycisk">Jeszcze raz</button> -->
 <p id=>Gdzieś pod polami ukryty jest troll-face. Znajdź go i złap,
   klikając na niego. Długo nie może uciekać</p>
 <p>Kliknąłeś:</p>
@@ -15,13 +14,10 @@
 <div id='main'>
 </div>
 
-
 <script>
   document.getElementById('start').addEventListener("click", wystartuj);
   document.getElementById('reset').addEventListener("click", resetuj);
 
-
-  //stwórz Array, do którego włóż pętlą nowe divy
   var wszystkieKwadraty = [];
   for (var i = 0; i < 9; ++i) {
     wszystkieKwadraty[i] = document.createElement('div');
@@ -29,7 +25,6 @@
     wszystkieKwadraty[i].className = 'kafelek';
   }
 
-  // dodanie obrazków wenątrz divów
   for (var j = 1; j <= 8; ++j) {
     var trollfaceImg = document.createElement('img');
     trollfaceImg.src = "trollface.png";
@@ -37,9 +32,7 @@
     wszystkieKwadraty[j].appendChild(trollfaceImg);
   }
 
-
   function wystartuj() {
-
     document.getElementById('start').disabled = true;
 
     // SZUFLOWANIE
@@ -63,7 +56,6 @@
       return array;
     }
 
-    //zamieszaj kolejność w Array i umieść w kodzie pętlą
     shuffle(wszystkieKwadraty);
     var main = document.getElementsByTagName('div')[0];
     (function () {
@@ -72,7 +64,6 @@
       }
     })();
 
-    //dodaj funkcje odpalającą pokazanie się trollface'a
     document.getElementById('a0').addEventListener("click", funkcjaBox0);
     document.getElementById('a1').addEventListener("click", funkcjaBox1);
     document.getElementById('a2').addEventListener("click", funkcjaBox2);
@@ -88,7 +79,7 @@
       document.getElementById('t1').classList.add('show-hide');
       setTimeout(function () {
         document.getElementById('t1').classList.remove('show-hide')
-      }, 500); //dawać to?
+      }, 400);
       licznik = document.getElementById('kliki').innerHTML;
       licznik++;
       document.getElementById('kliki').innerHTML = licznik;
@@ -96,6 +87,9 @@
 
     function funkcjaBox1() {
       document.getElementById('t2').classList.add('show-hide');
+      setTimeout(function () {
+        document.getElementById('t2').classList.remove('show-hide')
+      }, 400);
       licznik = document.getElementById('kliki').innerHTML;
       licznik++;
       document.getElementById('kliki').innerHTML = licznik;
@@ -103,6 +97,9 @@
 
     function funkcjaBox2() {
       document.getElementById('t3').classList.add('show-hide');
+      setTimeout(function () {
+        document.getElementById('t3').classList.remove('show-hide')
+      }, 400);
       licznik = document.getElementById('kliki').innerHTML;
       licznik++;
       document.getElementById('kliki').innerHTML = licznik;
@@ -110,6 +107,9 @@
 
     function funkcjaBox3() {
       document.getElementById('t4').classList.add('show-hide');
+      setTimeout(function () {
+        document.getElementById('t4').classList.remove('show-hide')
+      }, 400);
       licznik = document.getElementById('kliki').innerHTML;
       licznik++;
       document.getElementById('kliki').innerHTML = licznik;
@@ -117,6 +117,9 @@
 
     function funkcjaBox4() {
       document.getElementById('t5').classList.add('show-hide');
+      setTimeout(function () {
+        document.getElementById('t5').classList.remove('show-hide')
+      }, 400);
       licznik = document.getElementById('kliki').innerHTML;
       licznik++;
       document.getElementById('kliki').innerHTML = licznik;
@@ -124,6 +127,9 @@
 
     function funkcjaBox5() {
       document.getElementById('t6').classList.add('show-hide');
+      setTimeout(function () {
+        document.getElementById('t6').classList.remove('show-hide')
+      }, 400);
       licznik = document.getElementById('kliki').innerHTML;
       licznik++;
       document.getElementById('kliki').innerHTML = licznik;
@@ -131,6 +137,9 @@
 
     function funkcjaBox6() {
       document.getElementById('t7').classList.add('show-hide');
+      setTimeout(function () {
+        document.getElementById('t7').classList.remove('show-hide')
+      }, 400);
       licznik = document.getElementById('kliki').innerHTML;
       licznik++;
       document.getElementById('kliki').innerHTML = licznik;
@@ -174,18 +183,6 @@
     document.getElementById('kliki').innerHTML = 0;
     wystartuj();
   }
-
-  //Przycisk 'jeszcze raz'
-
-  /*
-   var przycisk = document.getElementById('przycisk');
-   przycisk.addEventListener('click', shuffle(wszystkieKwadraty));
-   przycisk.addEventListener('click', function () {
-   for (var i=0; i < wszystkieKwadraty.length; i++){
-   main.appendChild(wszystkieKwadraty[i]);}
-   });*/
-  //dlaczego ten przycisk działa tylko raz?
-
 
 </script>
 </body>
