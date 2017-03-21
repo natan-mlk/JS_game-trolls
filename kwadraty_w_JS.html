@@ -6,11 +6,14 @@
 </head>
 
 <body>
-<p id=>Gdzieś pod polami ukryty jest troll-face. Znajdź go i złap,
+<p>Gdzieś pod polami ukryty jest troll-face. Znajdź go i złap,
   klikając na niego. Długo nie może uciekać</p>
 <p>Kliknąłeś:</p>
 <p id="kliki">0</p>
-<p><button id="start">START</button> <button id="reset">Jeszcze raz</button> </p>
+<p>
+  <button id="start">START</button>
+  <button id="reset">Jeszcze raz</button>
+</p>
 <div id='main'>
 </div>
 
@@ -18,7 +21,10 @@
   document.getElementById('start').addEventListener("click", wystartuj);
   document.getElementById('reset').addEventListener("click", resetuj);
 
+  var licznik = document.getElementById('kliki').innerHTML;
   var wszystkieKwadraty = [];
+
+
   for (var i = 0; i < 9; ++i) {
     wszystkieKwadraty[i] = document.createElement('div');
     wszystkieKwadraty[i].id = 'a' + (i);
@@ -52,7 +58,6 @@
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;
       }
-
       return array;
     }
 
@@ -80,7 +85,6 @@
       setTimeout(function () {
         document.getElementById('t1').classList.remove('show-hide')
       }, 400);
-      licznik = document.getElementById('kliki').innerHTML;
       licznik++;
       document.getElementById('kliki').innerHTML = licznik;
     }
@@ -90,7 +94,6 @@
       setTimeout(function () {
         document.getElementById('t2').classList.remove('show-hide')
       }, 400);
-      licznik = document.getElementById('kliki').innerHTML;
       licznik++;
       document.getElementById('kliki').innerHTML = licznik;
     }
@@ -100,7 +103,6 @@
       setTimeout(function () {
         document.getElementById('t3').classList.remove('show-hide')
       }, 400);
-      licznik = document.getElementById('kliki').innerHTML;
       licznik++;
       document.getElementById('kliki').innerHTML = licznik;
     }
@@ -110,7 +112,6 @@
       setTimeout(function () {
         document.getElementById('t4').classList.remove('show-hide')
       }, 400);
-      licznik = document.getElementById('kliki').innerHTML;
       licznik++;
       document.getElementById('kliki').innerHTML = licznik;
     }
@@ -120,7 +121,6 @@
       setTimeout(function () {
         document.getElementById('t5').classList.remove('show-hide')
       }, 400);
-      licznik = document.getElementById('kliki').innerHTML;
       licznik++;
       document.getElementById('kliki').innerHTML = licznik;
     }
@@ -130,7 +130,6 @@
       setTimeout(function () {
         document.getElementById('t6').classList.remove('show-hide')
       }, 400);
-      licznik = document.getElementById('kliki').innerHTML;
       licznik++;
       document.getElementById('kliki').innerHTML = licznik;
     }
@@ -140,14 +139,15 @@
       setTimeout(function () {
         document.getElementById('t7').classList.remove('show-hide')
       }, 400);
-      licznik = document.getElementById('kliki').innerHTML;
       licznik++;
       document.getElementById('kliki').innerHTML = licznik;
     }
 
     function funkcjaBox7() {
       document.getElementById('t8').classList.add('show-hide');
-      licznik = document.getElementById('kliki').innerHTML;
+      setTimeout(function () {
+        document.getElementById('t8').classList.remove('show-hide')
+      }, 400);
       licznik++;
       document.getElementById('kliki').innerHTML = licznik;
     }
