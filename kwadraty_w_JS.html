@@ -80,14 +80,18 @@
     document.getElementById('a8').addEventListener("click", funkcjaBox8);
   }
 
+  function zmianyLicznika () {
+    licznik = document.getElementById('kliki').innerHTML;
+    licznik++;
+    document.getElementById('kliki').innerHTML = licznik;
+  }
+
     function funkcjaBox0() {
       document.getElementById('t1').classList.add('show-hide');
       setTimeout(function () {
         document.getElementById('t1').classList.remove('show-hide')
       }, 400);
-      licznik = document.getElementById('kliki').innerHTML;
-      licznik++;
-      document.getElementById('kliki').innerHTML = licznik;
+      zmianyLicznika()
     }
 
     function funkcjaBox1() {
@@ -95,9 +99,7 @@
       setTimeout(function () {
         document.getElementById('t2').classList.remove('show-hide')
       }, 400);
-      licznik = document.getElementById('kliki').innerHTML;
-      licznik++;
-      document.getElementById('kliki').innerHTML = licznik;
+      zmianyLicznika()
     }
 
     function funkcjaBox2() {
@@ -105,9 +107,7 @@
       setTimeout(function () {
         document.getElementById('t3').classList.remove('show-hide')
       }, 400);
-      licznik = document.getElementById('kliki').innerHTML;
-      licznik++;
-      document.getElementById('kliki').innerHTML = licznik;
+      zmianyLicznika()
     }
 
     function funkcjaBox3() {
@@ -115,9 +115,7 @@
       setTimeout(function () {
         document.getElementById('t4').classList.remove('show-hide')
       }, 400);
-      licznik = document.getElementById('kliki').innerHTML;
-      licznik++;
-      document.getElementById('kliki').innerHTML = licznik;
+      zmianyLicznika()
     }
 
     function funkcjaBox4() {
@@ -125,9 +123,7 @@
       setTimeout(function () {
         document.getElementById('t5').classList.remove('show-hide')
       }, 400);
-      licznik = document.getElementById('kliki').innerHTML;
-      licznik++;
-      document.getElementById('kliki').innerHTML = licznik;
+      zmianyLicznika()
     }
 
     function funkcjaBox5() {
@@ -135,9 +131,7 @@
       setTimeout(function () {
         document.getElementById('t6').classList.remove('show-hide')
       }, 400);
-      licznik = document.getElementById('kliki').innerHTML;
-      licznik++;
-      document.getElementById('kliki').innerHTML = licznik;
+      zmianyLicznika()
     }
 
     function funkcjaBox6() {
@@ -145,9 +139,7 @@
       setTimeout(function () {
         document.getElementById('t7').classList.remove('show-hide')
       }, 400);
-      licznik = document.getElementById('kliki').innerHTML;
-      licznik++;
-      document.getElementById('kliki').innerHTML = licznik;
+      zmianyLicznika()
     }
 
     function funkcjaBox7() {
@@ -155,9 +147,7 @@
       setTimeout(function () {
         document.getElementById('t8').classList.remove('show-hide')
       }, 400);
-      licznik = document.getElementById('kliki').innerHTML;
-      licznik++;
-      document.getElementById('kliki').innerHTML = licznik;
+      zmianyLicznika()
     }
 
     function funkcjaBox8() {
@@ -167,9 +157,8 @@
         '100%';
       document.getElementById('a8').style.backgroundRepeat =
         'no-repeat';
-      licznik = document.getElementById('kliki').innerHTML;
-      licznik++;
-      document.getElementById('kliki').innerHTML = licznik;
+      zmianyLicznika()
+
       document.getElementById('a0').removeEventListener("click", funkcjaBox0);
       document.getElementById('a1').removeEventListener("click", funkcjaBox1);
       document.getElementById('a2').removeEventListener("click", funkcjaBox2);
