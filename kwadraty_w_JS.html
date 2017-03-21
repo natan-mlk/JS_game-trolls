@@ -21,9 +21,9 @@
   document.getElementById('start').addEventListener("click", wystartuj);
   document.getElementById('reset').addEventListener("click", resetuj);
 
-  var licznik = document.getElementById('kliki').innerHTML;
-  var wszystkieKwadraty = [];
 
+  var wszystkieKwadraty = [];
+  var licznik = 0;
 
   for (var i = 0; i < 9; ++i) {
     wszystkieKwadraty[i] = document.createElement('div');
@@ -85,6 +85,7 @@
       setTimeout(function () {
         document.getElementById('t1').classList.remove('show-hide')
       }, 400);
+      licznik = document.getElementById('kliki').innerHTML;
       licznik++;
       document.getElementById('kliki').innerHTML = licznik;
     }
@@ -94,6 +95,7 @@
       setTimeout(function () {
         document.getElementById('t2').classList.remove('show-hide')
       }, 400);
+      licznik = document.getElementById('kliki').innerHTML;
       licznik++;
       document.getElementById('kliki').innerHTML = licznik;
     }
@@ -103,6 +105,7 @@
       setTimeout(function () {
         document.getElementById('t3').classList.remove('show-hide')
       }, 400);
+      licznik = document.getElementById('kliki').innerHTML;
       licznik++;
       document.getElementById('kliki').innerHTML = licznik;
     }
@@ -112,6 +115,7 @@
       setTimeout(function () {
         document.getElementById('t4').classList.remove('show-hide')
       }, 400);
+      licznik = document.getElementById('kliki').innerHTML;
       licznik++;
       document.getElementById('kliki').innerHTML = licznik;
     }
@@ -121,6 +125,7 @@
       setTimeout(function () {
         document.getElementById('t5').classList.remove('show-hide')
       }, 400);
+      licznik = document.getElementById('kliki').innerHTML;
       licznik++;
       document.getElementById('kliki').innerHTML = licznik;
     }
@@ -130,6 +135,7 @@
       setTimeout(function () {
         document.getElementById('t6').classList.remove('show-hide')
       }, 400);
+      licznik = document.getElementById('kliki').innerHTML;
       licznik++;
       document.getElementById('kliki').innerHTML = licznik;
     }
@@ -139,6 +145,7 @@
       setTimeout(function () {
         document.getElementById('t7').classList.remove('show-hide')
       }, 400);
+      licznik = document.getElementById('kliki').innerHTML;
       licznik++;
       document.getElementById('kliki').innerHTML = licznik;
     }
@@ -148,6 +155,7 @@
       setTimeout(function () {
         document.getElementById('t8').classList.remove('show-hide')
       }, 400);
+      licznik = document.getElementById('kliki').innerHTML;
       licznik++;
       document.getElementById('kliki').innerHTML = licznik;
     }
@@ -159,6 +167,7 @@
         '100%';
       document.getElementById('a8').style.backgroundRepeat =
         'no-repeat';
+      licznik = document.getElementById('kliki').innerHTML;
       licznik++;
       document.getElementById('kliki').innerHTML = licznik;
       document.getElementById('a0').removeEventListener("click", funkcjaBox0);
